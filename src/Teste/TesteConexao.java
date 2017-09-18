@@ -5,7 +5,7 @@
  */
 package Teste;
 
-import classededados.Conexao;
+import classededados.ConexaoServidor;
 
 /**
  *
@@ -14,8 +14,8 @@ import classededados.Conexao;
 public class TesteConexao {
 
     public static void main(String[] args) {
-        Conexao.getInstance().conectar();
+        ConexaoServidor.getInstance().conectar();
         
-        Conexao.getInstance().desconctar();
+        ConexaoServidor.getInstance().desconctar();
     }
 }

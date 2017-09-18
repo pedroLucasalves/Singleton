@@ -11,20 +11,20 @@ import java.sql.Connection;
  *
  * @author Pedro
  */
-public class Conexao extends Teste.TesteConexao {
+public class ConexaoServidor extends Teste.TesteConexao {
 
-    private Connection Conexao;
+    private Connection conexaoServidor;
     
 
-    private static Conexao instancia = null;
+    private static ConexaoServidor instancia = null;
 
-    private Conexao() {
+    private ConexaoServidor() {
     }
 
-    public static synchronized Conexao getInstance() {
+    public static synchronized ConexaoServidor getInstance() {
 
         if (instancia == null) {
-            instancia = new Conexao();
+            instancia = new ConexaoServidor();
         }
 
         return instancia;
